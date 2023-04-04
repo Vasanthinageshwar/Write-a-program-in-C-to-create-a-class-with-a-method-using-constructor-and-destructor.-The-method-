@@ -1,0 +1,38 @@
+Write a program in C++ to create a class with a method using
+constructor and destructor.
+The method has to decide whether a given year is a leap year or not.
+
+
+Code:
+#include &lt;iostream&gt;
+using namespace std;
+class leap
+{
+private:
+int y;
+public:
+void leapyear();
+leap()
+{
+cout&lt;&lt;&quot;Enter the year&quot;&lt;&lt;endl;
+}
+~leap();
+};
+
+void leap::leapyear()
+{
+cin&gt;&gt;y;
+if((y%4==0 &amp;&amp; y%100==0)||(y%4==0 &amp;&amp; y%100!=0))
+cout&lt;&lt;&quot;leap year&quot;&lt;&lt;endl;
+else
+cout&lt;&lt;&quot;Not a leap year.&quot;&lt;&lt;endl;
+}
+leap::~leap()
+{
+cout&lt;&lt;&quot;Memory deallocated&quot;&lt;&lt;endl;
+}
+int main()
+{
+leap year;
+year.leapyear();
+}
